@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delícias Batista</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- TOPO -->
+  <header class="hero">
+    <div class="container">
+      <h1>Delícias Batista</h1>
+      <p>Bolos no pote e muito mais para adoçar sua vida</p>
+      <a class="btn-primary" href="https://wa.me/5521995294926?text=Olá! Quero fazer um pedido na Delícias Batista 🍰" target="_blank">
+        Fazer Pedido no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- SOBRE COM PARALLAX -->
+  <section class="sobre">
+    <div class="parallax-bg"></div>
+    <div class="container conteudo-sobre">
+      <h2>Sobre Nós</h2>
+      <p>
+        Tudo começou com três mulheres incríveis — que decidiram transformar a rotina em algo mais doce. Unidas pela amizade, família e talento na cozinha, elas começaram a fazer bolos com o objetivo de vender e conquistar sua independência, espalhando amor em cada pote.
+      </p>
+      <p>
+        O que era apenas uma tentativa de sair da mesmice virou um negócio cheio de sabor, carinho e propósito. Hoje, a <strong>Delícias Batista</strong> representa mais do que sobremesas: representa força, união e o verdadeiro gosto de um sonho feito à mão.
+      </p>
+      <p>
+        Experimente você também e sinta o sabor de uma história feita com o coração. 💗
+      </p>
+    </div>
+  </section>
+
+  <!-- MURAL DAS DONAS -->
+  <section class="mural-donas">
+    <div class="container">
+      <h2>Mural das Donas</h2>
+      <p>Essas são as mãos e os corações por trás de cada pote cheio de sabor.</p>
+
+      <div class="grid-donas">
+        <div class="foto-dona">
+          <img src="dona.png" alt="Foto Dona 1" />
+        </div>
+        <div class="foto-dona">
+          <img src="dona2.png" alt="Foto Dona 2" />
+        </div>
+        <div class="foto-dona">
+          <img src="dona3.png" alt="Foto Dona 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="produtos">
+    <div class="container">
+      <h2>Nossos Potes de Bolo</h2>
+      <div class="grid-produtos">
+        <div class="produto">
+          <img src="boloPoret.png" alt="Bolo de Chocolate" />
+          <h3>Chocolate Cremoso</h3>
+          <p>Camadas generosas com brigadeiro. R$ 10,00</p>
+        </div>
+        <div class="produto">
+          <img src="boloPoret.png" alt="Bolo de Morango" />
+          <h3>Morango com Chantilly</h3>
+          <p>Leve e fresco com pedaços naturais. R$ 12,00</p>
+        </div>
+        <div class="produto">
+          <img src="boloPoret.png" alt="Bolo de Ninho" />
+          <h3>Leite Ninho</h3>
+          <p>Sabor suave e equilibrado. R$ 12,00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EM BREVE -->
+  <section class="categorias">
+    <div class="container">
+      <h2>Em Breve</h2>
+      <div class="grid-categorias">
+        <div class="cat-box">
+          <h3>Bolos de Aniversário</h3>
+          <ul>
+            <li>Festinha em Camadas</li>
+            <li>Bolo & Festa</li>
+            <li>Doces Memórias</li>
+          </ul>
+        </div>
+        <div class="cat-box">
+          <h3>Bolos Decorados</h3>
+          <ul>
+            <li>Arte em Bolo</li>
+            <li>Camada Perfeita</li>
+            <li>Bolo Show</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Fale com a gente no WhatsApp para fazer seu pedido:</p>
+      <a class="btn-primary" href="https://wa.me/5521995294926?text=Olá! Quero fazer um pedido na Delícias Batista 🍰" target="_blank">
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <p>Delícias Batista © 2025 – Feito com ❤️ por Vinicios Batista</p>
+  </footer>
+
+  <script>
+    // Parallax simples para a seção "Sobre Nós"
+    const sobre = document.querySelector('.sobre');
+    const parallax = document.querySelector('.parallax-bg');
+
+window.addEventListener('scroll', () => {
+  const rect = sobre.getBoundingClientRect();
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    // O valor para movimento pode ser calculado pela posição da seção na tela
+    let move = Math.min(Math.max(-rect.top * 0.2, -150), 0); // limite entre -150 e 0
+    parallax.style.transform = `translateY(${move}px) scale(1.1)`;
+  }
+});
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* Reset e fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom, #F8BBD0, #FFF3E0);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container padrão */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Hero section */
+.hero {
+  background: #1A73E8;
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Botão principal */
+.btn-primary {
+  background-color: #fff;
+  color: #1A73E8;
+  padding: 14px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+  background-color: #F8BBD0;
+  color: #1A73E8;
+}
+
+/* SOBRE com parallax */
+.sobre {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.parallax-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('paralax2.jpg'); /* sua imagem */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.65);
+  transform: translateY(0) scale(1.1); /* escala maior pra não aparecer espaço */
+  transition: transform 0.1s linear;
+  will-change: transform;
+  z-index: 1;
+}
+
+
+.conteudo-sobre {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  text-align: center;
+  background-color: #00000098;
+  border-radius: 10px;
+}
+
+.conteudo-sobre h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.conteudo-sobre p {
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+/* Produtos */
+.grid-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.produto {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.produto h3 {
+  color: #1A73E8;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+/* Categorias */
+.grid-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cat-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.cat-box h3 {
+  color: #F06292;
+  margin-bottom: 10px;
+}
+
+.cat-box ul {
+  list-style: none;
+}
+
+.cat-box li {
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+/* Mural das donas */
+.mural-donas {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mural-donas h2 {
+  font-size: 2em;
+  color: #1A73E8;
+  margin-bottom: 10px;
+}
+
+.mural-donas p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.grid-donas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.foto-dona {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.foto-dona:hover {
+  transform: scale(1.05);
+}
+
+.foto-dona img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #1A73E8;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
